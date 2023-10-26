@@ -134,7 +134,7 @@ where `σ` is density, `Δt` is the length of current ray segment, and `L_e` is 
 
 ![Spiral Rendering of Part 1](ta_images/transmittance.PNG)
 
-Compute the weights `T * (1 - exp(-σ * Δt))` in `VolumeRenderer._compute_weights`, and perform the summation in `VolumeRenderer._aggregate`. Note that for the first segment `T = 1`.
+Compute the weights `T * (1 - exp(-σ * Δt))` in `VolumeRenderer._compute_weights`, and perform the summation in `VolumeRenderer._aggregate`. Note that for the first segment `T = 1`. (Hint: using torch.cumprod would be useful in computing the transmittance)
 
 Use weights, and aggregation function to render *color* and *depth* (stored in `RayBundle.sample_lengths`). 
 
