@@ -153,7 +153,7 @@ def render(
     all_images = render_images(
         model, cameras, cfg.data.image_size
     )
-    imageio.mimsave('images/part_1.gif', [np.uint8(im * 255) for im in all_images])
+    imageio.mimsave('images/part_1.gif', [np.uint8(im * 255) for im in all_images], loop=0)
 
 
 def train(
@@ -228,7 +228,7 @@ def train(
     all_images = render_images(
         model, create_surround_cameras(3.0, n_poses=20), image_size, file_prefix='part_2'
     )
-    imageio.mimsave('images/part_2.gif', [np.uint8(im * 255) for im in all_images])
+    imageio.mimsave('images/part_2.gif', [np.uint8(im * 255) for im in all_images], loop=0)
 
 
 def create_model(cfg):
