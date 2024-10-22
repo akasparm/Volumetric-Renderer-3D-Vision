@@ -1,4 +1,4 @@
-# CMSC848F - Assignment 2: Single View to 3D
+# CMSC848F - Assignment 3
 
 Name: Akashkumar Parmar   
 UID: 118737430  
